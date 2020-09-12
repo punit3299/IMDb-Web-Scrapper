@@ -1,11 +1,11 @@
-<div class="animated">
+
     <section class="text-gray-700 body-font pt-16">
         <div class="container px-5 mx-auto">
             <div class="flex flex-col text-center w-full mb-10">
                 <div class="mx-auto">
-                    <img src="assets/images/imdb.png" class="w-16 h-16 ">
+                    <img src="assets/images/imdb.png" class="w-16 h-16 cursor-pointer">
                 </div>
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Popular Movie Genres
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 hover:underline cursor-pointer">Popular Movie Genres
                 </h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base"><b>IMDb</b> is the world's most popular and
                     authoritative source for movie, TV and celebrity content. Find
@@ -203,7 +203,7 @@
         <div class="mx-auto">
             <img src="assets/images/imdb.png" class="w-16 h-16 ">
         </div>
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Top10 Most Rated Movies Ever
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 hover:underline cursor-pointer">Top10 Most Rated Movies Ever
         </h1>
     </div>
 
@@ -250,4 +250,5 @@
             </div>
         </div>
     </section>
-</div>
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>

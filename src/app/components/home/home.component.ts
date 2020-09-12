@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImdbService } from 'src/app/services/imdb.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +9,18 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  public loading = false;
   top10Movies;
   top10MoviesByGenre;
 
   constructor(private imdbService:ImdbService,private router:Router) { }
 
   ngOnInit() {
+
+    this.loading = true;
     this.imdbService.getTop10Movies().subscribe(data=>{
-      console.log(data);
       this.top10Movies=data;
+      this.loading = false;
     })
   }
 

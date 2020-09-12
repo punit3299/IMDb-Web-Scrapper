@@ -1,9 +1,9 @@
-<div class="animated">
+
   <div class="flex flex-col text-center w-full pt-16">
     <div class="mx-auto">
-      <img src="assets/images/imdb.png" class="w-16 h-16 ">
+      <img src="assets/images/imdb.png" class="w-16 h-16 cursor-pointer">
     </div>
-    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Top 10 <span
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 hover:underline cursor-pointer">Top 10 <span
         style="text-transform: capitalize;">{{genre}}</span> Movies
     </h1>
   </div>
@@ -48,4 +48,5 @@
       </div>
     </div>
   </section>
-</div>
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
