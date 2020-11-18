@@ -5,13 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    window.scroll(0, 0);
-  }
-
+export class AppComponent implements OnInit {
   title = 'web-scrapper-app';
 
-  
+  ngOnInit() {
+    window.scroll(0, 0);
+  }
 
 }

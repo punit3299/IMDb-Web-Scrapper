@@ -9,24 +9,22 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public loading = false;
   top10Movies;
   top10MoviesByGenre;
+  homeLoader:boolean=true;
 
-  constructor(private imdbService:ImdbService,private router:Router) { }
+  constructor(private imdbService: ImdbService, private router: Router) { }
 
   ngOnInit() {
-
-    this.loading = true;
-    this.imdbService.getTop10Movies().subscribe(data=>{
-      this.top10Movies=data;
-      this.loading = false;
+    this.imdbService.getTop10Movies().subscribe(data => {
+      this.top10Movies = data;
+      this.homeLoader=false;
     })
   }
 
-  findGenreMovies(genre:string){
-    sessionStorage.setItem('genre',genre);
-    this.router.navigate(['genre',genre]);
+  findGenreMovies(genre: string) {
+    sessionStorage.setItem('genre', genre);
+    this.router.navigate(['genre', genre]);
   }
 
 }
