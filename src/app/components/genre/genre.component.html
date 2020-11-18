@@ -1,4 +1,4 @@
-<div class="flex flex-col text-center w-full pt-16">
+<div class="flex flex-col text-center w-full py-16">
   <div class="mx-auto">
     <img src="assets/images/imdb.png" class="w-16 h-16 cursor-pointer">
   </div>
@@ -11,7 +11,7 @@
   <div class="container px-5 py-8 mx-auto">
     <div *ngIf="genreLoader" class="text-center py-16">
       <div class="loader"></div>
-      <div class="text-sm my-4">Fetching {{genre|titlecase}} Movies</div>
+      <div class="my-4 font-medium">Fetching {{genre|titlecase}} Movies</div>
     </div>
     <div *ngIf="!genreLoader" class="flex flex-wrap -m-4">
       <div class=" lg:flex w-1/4 md:w-1/4 p-4 w-full" *ngFor="let movie of top10MoviesByGenre">
